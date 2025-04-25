@@ -1,0 +1,16 @@
+[Unit]
+Description=Run hyprsunset script 1h
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/cieranholmes/Scripts/hyprsunset.sh
+Restart=on-failure
+RestartSec=10
+Type=simple
+Environment=WAYLAND_DISPLAY=wayland-1
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+[Install]
+WantedBy=default.target
+
+
