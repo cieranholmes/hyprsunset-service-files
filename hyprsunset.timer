@@ -1,0 +1,10 @@
+[Unit]
+Description=Run hyprsunset every 30 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=30min
+Unit=hyprsunset.service
+
+[Install]
+WantedBy=timers.target
